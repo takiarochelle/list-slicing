@@ -140,7 +140,9 @@ def custom_pop(input_list):
 
     """
 
-    return None
+    last_item = input_list[-1]
+    input_list[-1:] = []
+    return last_item
 
 
 def custom_index(input_list, value):
@@ -156,7 +158,9 @@ def custom_index(input_list, value):
 
     """
 
-    return 0
+    for index, item in enumerate(input_list):
+        if item == value:
+            return index
 
 
 def custom_count(input_list, value):
